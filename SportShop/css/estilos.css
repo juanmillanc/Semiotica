@@ -1,0 +1,524 @@
+/* Reiniciar estilos predeterminados del navegador */
+body {
+    margin: 0;
+    /* Eliminar margen predeterminado */
+    padding: 0;
+    /* Eliminar relleno predeterminado */
+    font-family: 'Times New Roman', Times, serif;
+    /* Establecer la familia de fuentes */
+    background-image: url('../imagenes/fondo1.png');
+    /* Establecer imagen de fondo */
+    background-size: cover;
+    /* Cubrir todo el fondo */
+    background-position: center;
+    /* Posicionar la imagen de fondo en el centro */
+    background-attachment: fixed;
+    /* Fijar la imagen de fondo */
+    color: #fff;
+    /* Establecer color de texto a blanco */
+}
+
+.container-index {
+    background-color: black;
+    /* Puedes ajustar la posición y el espacio según tus necesidades */
+    margin-top: 150px;
+    /* Este margen puede ser ajustado según sea necesario */
+    padding: 20px;
+    color: white;
+    /* Por ejemplo, para cambiar el color del texto a blanco */
+}
+
+/* Estilos para la segunda sección */
+section {
+    margin-top: 10px;
+    /* Ajusta este valor según sea necesario para posicionar la segunda sección */
+}
+
+
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #333;
+    /* Establecer color de fondo para la barra de navegación */
+    display: flex;
+    /* Usar flexbox para el diseño */
+    justify-content: space-between;
+    /* Espaciar los elementos uniformemente */
+    align-items: center;
+    /* Alinear elementos verticalmente */
+    padding: 10px;
+    /* Agregar relleno */
+    position: fixed;
+    /* Fijar la barra de navegación en la parte superior */
+    top: 0;
+    /* Posicionar en la parte superior de la página */
+    width: 100%;
+    /* Ancho completo */
+    z-index: 1;
+    /* Establecer contexto de apilamiento */
+}
+
+/* Estilos para el contenedor de navegación */
+.nav-container {
+    display: flex;
+    /* Usar flexbox para el diseño */
+    justify-content: space-between;
+    /* Espaciar los elementos uniformemente */
+    align-items: center;
+    /* Alinear elementos verticalmente */
+    padding: 10px;
+    /* Agregar relleno */
+    background-color: rgba(0, 0, 0, 0.552);
+    /* Establecer color de fondo con transparencia */
+}
+
+/* Estilos para el logotipo */
+.logo img {
+    width: 150px;
+    /* Establecer ancho */
+    height: 150px;
+    /* Establecer altura */
+    border-radius: 50%;
+    /* Aplicar borde redondeado para forma circular */
+    margin: 0 50px;
+    /* Agregar margen */
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    /* Usar flexbox para el diseño */
+    align-items: center;
+    /* Alinear elementos verticalmente */
+    padding: 20px;
+    /* Agregar relleno */
+}
+
+/* Estilos para el campo de búsqueda */
+.search-input {
+    background-color: rgb(0, 0, 0);
+    /* Establecer color de fondo */
+    color: #fff;
+    /* Establecer color de texto a blanco */
+    border: none;
+    /* Eliminar borde */
+    border-radius: 30px;
+    /* Aplicar borde redondeado */
+    padding: 20px 30px;
+    /* Agregar relleno */
+}
+
+/* Estilos para el botón de búsqueda */
+.search-button {
+    background-color: #000;
+    /* Establecer color de fondo */
+    color: #fff;
+    /* Establecer color de texto a blanco */
+    border: none;
+    /* Eliminar borde */
+    border-radius: 100%;
+    /* Aplicar borde redondeado para forma circular */
+    padding: 20px;
+    /* Agregar relleno */
+    margin-left: 10px;
+    /* Agregar margen izquierdo */
+    cursor: pointer;
+    /* Cambiar cursor a puntero */
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilos para las imágenes de usuario y carrito */
+.user-image,
+.cart-image {
+    width: 50px;
+    /* Establecer ancho */
+    height: 50px;
+    /* Establecer altura */
+    margin: 10px;
+    /* Agregar margen */
+    cursor: pointer;
+    /* Cambiar cursor a puntero */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: rgba(0, 0, 0, 0.552);
+    /* Establecer color de fondo con transparencia */
+    display: flex;
+    /* Usar flexbox para el diseño */
+    align-items: center;
+    /* Alinear elementos verticalmente */
+    padding: 1px;
+    /* Agregar relleno */
+}
+
+/* Estilos para los enlaces de navegación a la izquierda */
+.nav-left {
+    display: flex;
+    /* Usar flexbox para el diseño */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    text-decoration: none;
+    /* Eliminar subrayado */
+    color: #fff;
+    /* Establecer color de texto a blanco */
+    margin: 0 15px;
+    /* Agregar margen */
+    padding: 5px 6px;
+    /* Agregar relleno */
+    transition: color 0.3s;
+    /* Agregar efecto de transición para cambio de color */
+}
+
+/* Estilos para los enlaces de navegación al pasar el mouse */
+.nav-link:hover {
+    color: rgb(64, 64, 64);
+    /* Cambiar color de texto al pasar el mouse */
+}
+
+/* Estilos para las secciones */
+section {
+    text-align: center;
+    /* Centrar texto */
+    padding: 10px 0;
+    /* Agregar relleno */
+}
+
+/* Estilos para el título */
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    /* Establecer familia de fuentes */
+    font-size: 80px;
+    /* Establecer tamaño de fuente */
+    color: #ffffff;
+    /* Establecer color de texto a blanco */
+    padding: 5px;
+    /* Mostrar como bloque en línea */
+    position: relative;
+    /* Establecer posición relativa */
+    background-color: #000000;
+    /* Establecer color de fondo */
+}
+
+/* Estilos para el botón de registro */
+.registro-button {
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    padding: 25px 50px;
+    /* Agregar relleno */
+    background-color: #000000;
+    /* Establecer color de fondo */
+    color: #ffffff;
+    /* Establecer color de texto a blanco */
+    text-decoration: none;
+    /* Eliminar subrayado */
+    font-size: 30px;
+    /* Establecer tamaño de fuente */
+    border-radius: 5px;
+    /* Aplicar borde redondeado */
+    border: 2px solid #000000;
+    /* Establecer borde */
+    transition: background-color 0.3s, color 0.3s;
+    /* Agregar efecto de transición */
+    margin-top: -10px;
+    /* Agregar margen superior */
+}
+
+/* Estilos para el botón de registro al pasar el mouse */
+.registro-button:hover {
+    background-color: #ffffff;
+    /* Cambiar color de fondo al pasar el mouse */
+    color: #000000;
+    /* Cambiar color de texto al pasar el mouse */
+}
+
+/*circulo imagenes*/
+.container-circulos {
+    display: flex;
+    /* Utilizar flexbox para colocar los elementos en línea */
+    width: 100%;
+    padding: 20px;
+}
+
+.container-imagen {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.circulo {
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.container-imagen h2 {
+    font-weight: 600;
+}
+
+
+
+.ver-todo {
+    margin: 50px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor-columna {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.button {
+    background: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #333333;
+    color: #f2f2f2;
+}
+
+/*circulo imagenes*/
+.container-imagen {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*columnas*/
+.columna1 {
+    width: 50%;
+    float: left;
+    padding-left: 25px;
+    text-align: center;
+}
+
+:root {
+    --main-dark: #000000;
+    --main-orange: #FF6F0F;
+    --main-white: #fff;
+    --light: rgba(255, 255, 255, 0.5);
+}
+
+main {
+    flex: 1;
+    /* This will push the footer to the bottom */
+}
+
+footer {
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    color: var(--main-white);
+    text-align: center;
+    padding: 20px;
+}
+
+
+.custom-container {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.custom-col-3 {
+    width: 25%;
+    float: left;
+}
+
+.custom-col-6 {
+    width: 50%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.custom-container-fluid {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.custom-logo {
+    color: var(--main-orange);
+}
+
+.custom-logo span {
+    color: var(--main-white);
+}
+
+.custom-btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.custom-social {
+    margin-top: 20px;
+}
+
+.custom-p {
+    color: var(--light);
+    font-family: system-ui !important;
+    width: 300px;
+}
+
+.custom-p a {
+    color: var(--main-white);
+    text-decoration: none;
+}
+
+.custom-social-btn i {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border: 1px solid var(--light);
+    line-height: 40px;
+    color: var(--light);
+    border-radius: 5px;
+}
+
+.custom-social-btn i:hover {
+    color: var(--main-white);
+    border: 1px solid var(--main-white);
+}
+
+.custom-h5 {
+    color: var(--main-white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.custom-me-3 {
+    margin-right: 1rem !important;
+}
+
+footer .custom-btn.btn-link {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-family: system-ui !important;
+    line-height: 28px;
+    color: var(--light);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+footer .custom-btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+
+footer .custom-btn.btn-link:hover {
+    color: var(--main-white);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.custom-input {
+    width: 280px;
+    background-color: var(--main-white);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    outline: none;
+}
+
+.custom-input:focus {
+    color: #787878;
+    background-color: white;
+    border-color: #ffb787;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 111, 15, 0.25);
+}
+
+.custom-signbtn {
+    position: absolute;
+    right: 95px;
+    top: 7px;
+    padding: 10px 20px;
+    background-color: var(--main-orange);
+    color: var(--main-white);
+    border-radius: 5px;
+    border: 1px solid var(--main-orange);
+    font-size: 16px;
+    transition: .5s;
+}
+
+.custom-signbtn:active:focus {
+    box-shadow: 0 0 0 0.25rem rgba(217, 94, 13, 0.5);
+}
+
+.custom-signbtn:hover {
+    color: var(--main-orange);
+    background: transparent;
+}
+
+.custom-design {
+    text-align: right;
+}
+
+.custom-footb {
+    float: right;
+}
+
+
+.user-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}

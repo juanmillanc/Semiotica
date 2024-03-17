@@ -1,0 +1,111 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background-image: url('../imagenes/fondo2.jpg');
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    /* Cubrir toda la pantalla con la imagen de fondo */
+    background-position: center;
+    /* Centrar la imagen de fondo */
+}
+
+.swiper {
+    background-color: rgba(0, 0, 0, 0.734);
+}
+
+.swiper {
+    width: 100%;
+    padding: 150px 0 50px 0;
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 470px;
+    background-color: #1b1b1b;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    padding: 40px;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.icons i {
+    font-size: 20px;
+    color: #fff900;
+}
+
+.icons a {
+    font-size: 20px;
+    color: #fff900;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout */
+}
+
+.product-txt {
+    text-align: center;
+    /* Align the text to the center */
+    margin-top: 20px;
+    /* Add margin between image and text */
+}
+
+
+.product-txt h1 {
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    /* Add margin between product name and price */
+}
+
+.product-txt span {
+    font-size: 25px;
+    color: #fff900;
+    font-weight: bold;
+}
+
+.product-img {
+    text-align: center;
+    /* Align the image to the center */
+    margin-top: 10px;
+    /* Add margin between text and image */
+}
+
+.product-img img {
+    width: 200px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 55px;
+    border: 1px solid #fff900;
+    border-radius: 25px;
+    color: #fff900;
+    text-decoration: none;
+    margin-top: 20px;
+    /* Adjust the margin */
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    margin-top: -128px;
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+}

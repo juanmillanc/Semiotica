@@ -1,0 +1,253 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background-image: url('../imagenes/sport3.jpeg');
+    /* Establece la imagen de fondo */
+    background-size: cover;
+    /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    /* Posiciona la imagen de fondo en el centro */
+    margin: 0;
+    /* Elimina los márgenes predeterminados */
+    font-family: "lato", sans-serif;
+    /* Define la fuente principal */
+    color: #000;
+    /* Establece el color de texto por defecto para todo el cuerpo */
+    /* Color de texto por defecto para todo el cuerpo */
+}
+
+.loginFrm {
+    display: flex;
+    /* Usa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    height: 90vh;
+    /* Establece la altura al 100% del viewport */
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.507);
+    /* Fondo semitransparente del formulario */
+    width: 400px;
+    /* Ancho del formulario */
+    border-radius: 8px;
+    /* Borde redondeado */
+    padding: 20px 40px;
+    /* Relleno interno */
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    /* Sombra */
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 36px;
+    /* Tamaño del texto del título */
+    margin-bottom: 30px;
+    /* Margen inferior del título */
+    text-align: center;
+    /* Alineación del texto al centro */
+    color: #000000;
+    /* Color del texto */
+}
+
+.inputContainer {
+    position: relative;
+    /* Establece la posición relativa */
+    height: 45px;
+    /* Altura del contenedor del campo de entrada */
+    width: 90%;
+    /* Ancho del contenedor del campo de entrada */
+    margin-bottom: 20px;
+    /* Margen inferior del contenedor */
+}
+
+.input {
+    position: absolute;
+    /* Establece la posición absoluta para el campo de entrada */
+    top: 0;
+    /* Ubicación desde la parte superior */
+    left: 0;
+    /* Ubicación desde la izquierda */
+    height: 100%;
+    /* Altura del campo de entrada */
+    width: 100%;
+    /* Ancho del campo de entrada */
+    border: 1px solid #000;
+    /* Borde del campo de entrada */
+    border-radius: 7px;
+    /* Borde redondeado */
+    font-size: 16px;
+    /* Tamaño del texto del campo de entrada */
+    padding: 0 20px;
+    /* Relleno interno del campo de entrada */
+    outline: none;
+    /* Elimina el contorno al enfocar */
+    background: none;
+    /* Fondo transparente */
+    z-index: 1;
+    /* Coloca el campo de entrada sobre otros elementos */
+}
+
+.label {
+    position: absolute;
+    /* Establece la posición absoluta para la etiqueta */
+    top: 15px;
+    /* Ubicación desde la parte superior */
+    left: 15px;
+    /* Ubicación desde la izquierda */
+    padding: 0 4px;
+    /* Relleno interno de la etiqueta */
+    color: #333;
+    /* Color del texto de la etiqueta */
+    font-size: 16px;
+    /* Tamaño del texto de la etiqueta */
+    transition: 0.5s;
+    /* Animación de transición */
+    z-index: 0;
+    /* Coloca la etiqueta detrás del campo de entrada */
+}
+
+::placeholder {
+    color: transparent;
+    /* Hace que el marcador de posición sea transparente */
+}
+
+.submitBtn {
+    display: block;
+    /* Hace que el botón sea un elemento de bloque */
+    margin: 0 auto;
+    /* Margen automático en los lados para centrarlo horizontalmente */
+    padding: 15px 30px;
+    /* Relleno interno del botón */
+    border: none;
+    /* Sin borde */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border-radius: 6px;
+    /* Borde redondeado */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima del botón */
+    font-size: 16px;
+    /* Tamaño del texto del botón */
+    margin-top: 20px;
+    /* Margen superior del botón */
+    height: 100%;
+    /* Altura del campo de entrada */
+    width: 100%;
+    /* Ancho del campo de entrada */
+}
+
+.submitBtn:hover {
+    background-color: #333333;
+    /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-2px);
+    /* Efecto de desplazamiento hacia arriba */
+}
+
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    /* Estilos para la etiqueta cuando el campo está enfocado o tiene contenido */
+    top: 1px;
+    /* Posicionamiento hacia arriba */
+    left: 1px;
+    /* Posicionamiento hacia la izquierda */
+    z-index: 10;
+    /* Coloca la etiqueta sobre el campo de entrada */
+    font-size: 14px;
+    /* Tamaño del texto de la etiqueta reducido */
+    font-weight: 600;
+    /* Peso de la fuente de la etiqueta */
+    color: rgb(0, 0, 0);
+    /* Color del texto de la etiqueta */
+}
+
+.input:focus {
+    /* Estilos para el campo de entrada cuando está enfocado */
+    border: 2px solid rgb(0, 0, 0);
+    /* Borde al enfocar */
+}
+
+/* ... Tus estilos CSS existentes ... */
+
+/* Estilos para el contenedor del enlace "Registrarse" */
+.registerBtnContainer {
+    text-align: center;
+    /* Alineación del texto al centro */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+.registerBtn {
+    display: inline-block;
+    /* Elemento en línea con bloque */
+    padding: 10px 20px;
+    /* Relleno interno */
+    border: none;
+    /* Sin borde */
+    background-color: rgb(255, 255, 255);
+    /* Color de fondo */
+    color: rgb(0, 0, 0);
+    /* Color del texto */
+    border-radius: 6px;
+    /* Borde redondeado */ 
+    cursor: pointer;
+    /* Cursor al pasar */
+    font-size: 16px;
+    /* Tamaño del texto */
+    text-decoration: none;
+    /* Sin decoración de texto */
+}
+
+.registerBtn:hover {
+    background-color: rgb(0, 0, 0);
+    /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-2px);
+    /* Efecto de desplazamiento hacia arriba */
+}
+
+.pie-form {
+    font-size: 100%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 47, 255);
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #000000;
+}
+
+#central {
+    max-width: 320px;
+    width: 500%;
+}
+
+.inferior {
+    margin-top: 10px;
+    font-size: 100%;
+    text-align: center;
+}
+
+.inferior a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3px;
+}
+
+.inferior a:hover {
+    color: rgb(0, 26, 255);
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}

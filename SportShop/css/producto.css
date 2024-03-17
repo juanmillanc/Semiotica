@@ -1,0 +1,746 @@
+/* Resetear CSS */
+* {
+    margin: 0;
+    /* Reiniciar margen a cero para todos los elementos */
+    padding: 0;
+    /* Reiniciar relleno a cero para todos los elementos */
+    box-sizing: border-box;
+    /* El modelo de caja incluye relleno y borde en el ancho y alto total del elemento */
+    font-family: sans-serif;
+    /* Familia de fuentes predeterminada para todos los elementos */
+    letter-spacing: 0.03em;
+    /* Agregar un pequeño espaciado entre letras */
+    line-height: 1.3;
+    /* Establecer la altura de línea */
+}
+
+/* Estilos del cuerpo */
+body {
+    margin: 0;
+    /* Reiniciar margen para el elemento body */
+    padding: 0;
+    /* Reiniciar relleno para el elemento body */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Familia de fuentes específica para el cuerpo */
+    background-image: url('../imagenes/fondo2.jpg');
+    /* Imagen de fondo para el cuerpo */
+    background-size: cover;
+    /* Cubrir toda la pantalla con la imagen de fondo */
+    background-position: center;
+    /* Centrar la imagen de fondo */
+    background-attachment: fixed;
+    /* Fondo fijo al desplazarse */
+    color: #fff;
+    /* Color del texto */
+}
+
+/* Estilos generales */
+p {
+    padding: 5px;
+    /* Agregar relleno a los párrafos */
+}
+
+img {
+    border-radius: 4px;
+    /* Agregar un radio de borde a todas las imágenes para esquinas ligeramente redondeadas */
+}
+
+.button {
+    background: #ffffff;
+    /* Color de fondo del botón */
+    text-decoration: none;
+    /* Eliminar subrayados de los enlaces */
+    padding: 15px;
+    /* Agregar relleno al botón */
+    margin-top: 15px;
+    /* Margen superior para el botón */
+    border-radius: 5px;
+    /* Agregar un radio de borde para esquinas redondeadas al botón */
+    color: #000000;
+    /* Color del texto del botón */
+    font-weight: 700;
+    /* Peso de la fuente en negrita para el botón */
+}
+
+.button:hover {
+    cursor: pointer;
+    /* Cambiar el cursor a un puntero al pasar el mouse */
+    text-decoration: none;
+    /* Eliminar subrayados al pasar el mouse */
+    background-color: #2c2c2c;
+    /* Color de fondo al pasar el mouse */
+    color: #f2f2f2;
+    /* Color del texto al pasar el mouse */
+}
+
+/* Estilos de navegación */
+.nav-container {
+    display: flex;
+    /* Contenedor flex para la navegación */
+    justify-content: space-between;
+    /* Espacio entre los elementos en el contenedor */
+    align-items: center;
+    /* Centrar los elementos verticalmente */
+    padding: 10px;
+    /* Relleno para el contenedor de navegación */
+    background-color: rgba(10, 10, 10, 0.829);
+    /* Color de fondo con transparencia alfa */
+}
+
+.nav-left {
+    display: flex;
+    /* Contenedor flex para el lado izquierdo de la navegación */
+}
+
+.logo img {
+    width: 150px;
+    /* Ancho de la imagen del logotipo */
+    height: 150px;
+    /* Altura de la imagen del logotipo */
+    border-radius: 50%;
+    /* Borde circular para el logotipo */
+    margin: 0 50px;
+    /* Margen alrededor del logotipo */
+}
+
+.search-bar {
+    display: flex;
+    /* Contenedor flex para la barra de búsqueda */
+    align-items: center;
+    /* Centrar los elementos verticalmente */
+    padding: 20px;
+    /* Relleno para la barra de búsqueda */
+}
+
+.search-input {
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo para la entrada de búsqueda */
+    color: #fff;
+    /* Color del texto para la entrada de búsqueda */
+    border: none;
+    /* Eliminar borde para la entrada de búsqueda */
+    border-radius: 30px;
+    /* Borde redondeado para las esquinas */
+    padding: 20px 30px;
+    /* Relleno para la entrada de búsqueda */
+}
+
+.search-button {
+    background-color: #000;
+    /* Color de fondo para el botón de búsqueda */
+    color: #fff;
+    /* Color del texto para el botón de búsqueda */
+    border: none;
+    /* Eliminar borde para el botón de búsqueda */
+    border-radius: 100%;
+    /* Borde redondeado para hacer un botón circular */
+    padding: 20px;
+    /* Relleno para el botón de búsqueda */
+    margin-left: 10px;
+    /* Margen izquierdo para el botón de búsqueda */
+    cursor: pointer;
+    /* Cambiar el cursor a un puntero */
+}
+
+.nav-link {
+    text-decoration: none;
+    /* Eliminar subrayados de los enlaces de navegación */
+    color: #fff;
+    /* Color del texto para los enlaces de navegación */
+    margin: 0 15px;
+    /* Margen alrededor de los enlaces de navegación */
+    padding: 5px 6px;
+    /* Relleno para los enlaces de navegación */
+    transition: color 0.3s;
+    /* Transición suave del color al pasar el mouse */
+}
+
+.nav-link:hover {
+    color: rgb(64, 64, 64);
+    /* Color del texto al pasar el mouse sobre los enlaces de navegación */
+}
+
+.logo-nav {
+    display: flex;
+    /* Contenedor flex para la navegación del logotipo */
+    justify-content: space-between;
+    /* Espacio entre los elementos en el contenedor */
+    align-items: center;
+    /* Centrar los elementos verticalmente */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan a la siguiente línea */
+}
+
+.logo {
+    color: #f2f2f2;
+    /* Color del texto del logotipo */
+    font-size: 30px;
+    /* Tamaño de fuente del logotipo */
+    font-weight: 100;
+    /* Peso de la fuente para el logotipo */
+}
+
+.cart-image,
+.user-image {
+    width: 50px;
+    /* Ancho de las imágenes de carrito y usuario */
+    height: 50px;
+    /* Altura de las imágenes de carrito y usuario */
+    margin: 10px;
+    /* Margen alrededor de las imágenes de carrito y usuario */
+    margin-right: 10px;
+    /* Margen derecho para el espaciado */
+    cursor: pointer;
+    /* Estilo del cursor */
+}
+
+.menu-icon {
+    display: none;
+    /* Ocultar inicialmente el icono del menú */
+}
+
+.navigation ul {
+    margin: 0;
+    /* Reiniciar margen para la lista de navegación */
+    padding: 0;
+    /* Reiniciar relleno para la lista de navegación */
+    list-style: none;
+    /* Eliminar estilos de lista por defecto */
+}
+
+.navigation ul li {
+    display: inline-block;
+    /* Mostrar elementos de lista en línea */
+}
+
+.navigation ul li a {
+    display: block;
+    /* Hacer enlaces de navegación de bloque para estilizar */
+    padding: 0 1rem;
+    /* Relleno para enlaces de navegación */
+    font-weight: 700;
+    /* Peso de la fuente para enlaces de navegación */
+}
+
+.navigation ul li a:hover {
+    color: #f2f2f2;
+    /* Color del texto al pasar el mouse sobre enlaces de navegación */
+}
+
+.navigation ul .search-icon input {
+    color: #000;
+    /* Color del texto para la entrada de icono de búsqueda */
+    font-size: 16px;
+    /* Tamaño de fuente para la entrada de icono de búsqueda */
+    border-radius: 5px 0 0 5px;
+    /* Borde redondeado para las esquinas */
+}
+
+.navigation ul .search-icon .icon {
+    cursor: pointer;
+    /* Estilo del cursor para el icono de búsqueda */
+}
+
+.navigation ul .search-icon .icon span {
+    font-size: 18px;
+    /* Tamaño de fuente para el ícono de búsqueda */
+    color: #cccccc;
+    /* Color del texto para el ícono de búsqueda */
+}
+
+.navigation ul .search-icon .icon span:hover {
+    color: #f2f2f2;
+    /* Color del texto al pasar el mouse sobre el ícono de búsqueda */
+}
+
+/* Íconos y estilos para carrito de compras */
+.icomin,
+.icomin:hover,
+.bi-cart3,
+.bi-cart3:hover {
+    color: #cccccc;
+    /* Color de íconos de carrito de compras */
+}
+
+.bi-cart3:hover,
+.icomin:hover {
+    color: #f2f2f2;
+    /* Cambiar el color de los íconos al pasar el mouse sobre ellos */
+}
+
+.car {
+    position: relative;
+    /* Posición relativa para elementos anidados dentro del carrito */
+}
+
+/* Estilos del menú desplegable del carrito */
+.dropdown-menu {
+    position: absolute;
+    /* Posición absoluta para el menú desplegable del carrito */
+    top: 100%;
+    /* Colocar el menú desplegable justo debajo del elemento de activación */
+    right: 0;
+    /* Colocar el menú desplegable en la posición correcta */
+    display: none;
+    /* Ocultar el menú desplegable por defecto */
+    height: 400px;
+    /* Altura del menú desplegable del carrito */
+    min-width: 10rem;
+    /* Ancho mínimo del menú desplegable del carrito */
+    padding: .5rem 0;
+    /* Relleno para el menú desplegable del carrito */
+    margin: .125rem 0 0;
+    /* Margen para el menú desplegable del carrito */
+    font-size: 1rem;
+    /* Tamaño de fuente para el menú desplegable del carrito */
+    color: #212529;
+    /* Color de texto para el menú desplegable del carrito */
+    text-align: left;
+    /* Alinear texto a la izquierda en el menú desplegable del carrito */
+    list-style: none;
+    /* Eliminar estilos de lista por defecto */
+    background-color: #fff;
+    /* Color de fondo para el menú desplegable del carrito */
+    background-clip: padding-box;
+    /* Aplicar el color de fondo solo a la caja de relleno */
+    border: 1px solid rgba(0, 0, 0, .15);
+    /* Borde del menú desplegable del carrito */
+    border-radius: .25rem;
+    /* Borde redondeado para el menú desplegable del carrito */
+    overflow-y: scroll;
+    /* Agregar desplazamiento vertical si el contenido es demasiado largo */
+}
+
+#vaciar-carrito,
+#procesar-pedido {
+    padding: 8px;
+    /* Relleno para los botones en el menú desplegable del carrito */
+    margin-top: 2px;
+    /* Margen superior para los botones en el menú desplegable del carrito */
+    text-align: center;
+    /* Alinear texto al centro para los botones en el menú desplegable del carrito */
+}
+
+.dropdown-menu.show {
+    display: block;
+    /* Mostrar el menú desplegable cuando la clase 'show' está presente */
+}
+
+.button-vaciar,
+.button-pedido {
+    text-decoration: none;
+    /* Eliminar subrayados para los botones en el menú desplegable del carrito */
+    padding: 15px;
+    /* Relleno para los botones en el menú desplegable del carrito */
+    margin-top: 15px;
+    /* Margen superior para los botones en el menú desplegable del carrito */
+    border-radius: 5px;
+    /* Borde redondeado para los botones en el menú desplegable del carrito */
+    font-weight: 700;
+    /* Peso de la fuente para los botones en el menú desplegable del carrito */
+}
+
+.button-vaciar {
+    background: #17A2B8;
+    /* Color de fondo para el botón de vaciar carrito */
+    color: #f2f2f2;
+    /* Color del texto para el botón de vaciar carrito */
+}
+
+.button-vaciar:hover {
+    cursor: pointer;
+    /* Cambiar el cursor a un puntero al pasar el mouse */
+    text-decoration: none;
+    /* Eliminar subrayados al pasar el mouse */
+    background-color: #0c505a;
+    /* Color de fondo al pasar el mouse */
+    color: #f2f2f2;
+    /* Color del texto al pasar el mouse */
+}
+
+.button-pedido {
+    background: #28A745;
+    /* Color de fondo para el botón de procesar pedido */
+    color: #f2f2f2;
+    /* Color del texto para el botón de procesar pedido */
+}
+
+.button-pedido:hover {
+    cursor: pointer;
+    /* Cambiar el cursor a un puntero al pasar el mouse */
+    text-decoration: none;
+    /* Eliminar subrayados al pasar el mouse */
+    background-color: #1e612e;
+    /* Color de fondo al pasar el mouse */
+    color: #f2f2f2;
+    /* Color del texto al pasar el mouse */
+}
+
+/* Estilos del contenido principal */
+main {
+    padding-top: 6rem;
+    /* Relleno superior para el contenido principal */
+    background-color: rgba(0, 0, 0, 0.552);
+    /* Color de fondo para el contenido principal */
+}
+
+/* Estilos del modal */
+.modal {
+    width: 100%;
+    /* Ancho completo para el modal */
+    min-height: 100vh;
+    /* Altura mínima del modal para cubrir la pantalla */
+    background: rgba(0, 0, 0, 0.9);
+    /* Fondo oscuro semitransparente para el modal */
+    position: fixed;
+    /* Posición fija para el modal */
+    top: 0;
+    /* Colocar el modal en la parte superior */
+    left: 0;
+    /* Colocar el modal en la parte izquierda */
+    display: none;
+    /* Ocultar el modal por defecto */
+}
+
+.modal-content {
+    display: flex;
+    /* Contenedor flex para el contenido del modal */
+    justify-content: center;
+    /* Centrar el contenido horizontalmente en el modal */
+    align-items: center;
+    /* Centrar el contenido verticalmente en el modal */
+    height: 100vh;
+    /* Altura completa para el contenido del modal */
+}
+
+.modal-img {
+    width: 50%;
+    /* Ancho del contenido de imagen en el modal */
+}
+
+.modal-boton {
+    position: absolute;
+    /* Posición absoluta para el botón de cerrar el modal */
+    top: 10px;
+    /* Colocar el botón en la parte superior */
+    right: 10px;
+    /* Colocar el botón en la parte derecha */
+    color: white;
+    /* Color del texto para el botón de cerrar el modal */
+    cursor: pointer;
+    /* Estilo del cursor para el botón de cerrar el modal */
+    font-weight: bold;
+    /* Peso de la fuente para el botón de cerrar el modal */
+    width: 50px;
+    /* Ancho del botón de cerrar el modal */
+    height: 50px;
+    /* Altura del botón de cerrar el modal */
+    line-height: 50px;
+    /* Altura de línea para el botón de cerrar el modal */
+    background: #DF691A;
+    /* Color de fondo para el botón de cerrar el modal */
+    font-size: 2em;
+    /* Tamaño de fuente para el botón de cerrar el modal */
+    text-align: center;
+    /* Alinear texto al centro para el botón de cerrar el modal */
+    border-radius: 50%;
+    /* Borde redondeado para el botón de cerrar el modal */
+    font-family: monospace;
+    /* Familia de fuentes para el botón de cerrar el modal */
+}
+
+.modal-open {
+    display: block;
+    /* Mostrar el modal cuando la clase 'modal-open' está presente */
+}
+
+/* Estilos de las tarjetas de productos */
+.container-productos {
+    width: 100%;
+    /* Ancho completo para el contenedor de productos */
+    max-width: 1200px;
+    /* Ancho máximo para el contenedor de productos */
+    height: auto;
+    /* Altura automática para el contenedor de productos */
+    display: flex;
+    /* Contenedor flex para los productos */
+    flex-wrap: wrap;
+    /* Permitir que los productos se envuelvan a la siguiente línea */
+    justify-content: center;
+    /* Centrar los productos horizontalmente */
+    margin: auto;
+    /* Margen automático para centrar el contenedor de productos */
+    background-color: rgba(0, 0, 0, 0.552);
+    /* Color de fondo para el contenedor de productos */
+}
+
+.container-productos .card {
+    width: 260px;
+    /* Ancho de la tarjeta de producto */
+    height: 390px;
+    /* Altura de la tarjeta de producto */
+    background: #000000;
+    /* Color de fondo para la tarjeta de producto */
+    color: #f2f2f2;
+    /* Color del texto para la tarjeta de producto */
+    border-radius: 8px;
+    /* Borde redondeado para la tarjeta de producto */
+    border: 1px solid #000000;
+    /* Borde sólido para la tarjeta de producto */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    /* Sombra para la tarjeta de producto */
+    overflow: hidden;
+    /* Ocultar el contenido que se desborda de la tarjeta */
+    margin: 20px;
+    /* Margen alrededor de la tarjeta de producto */
+    text-align: center;
+    /* Alinear texto al centro en la tarjeta de producto */
+    align-items: center;
+    /* Centrar elementos verticalmente en la tarjeta de producto */
+    transition: all 0.25s;
+    /* Transición suave para la tarjeta de producto al pasar el mouse */
+}
+
+.container-productos .card:hover {
+    transform: translateY(-15px);
+    /* Mover la tarjeta hacia arriba al pasar el mouse */
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada al pasar el mouse */
+}
+
+.container-productos .card img {
+    width: 260px;
+    /* Ancho de la imagen del producto */
+    height: 190px;
+    /* Altura de la imagen del producto */
+    cursor: pointer;
+    /* Cambiar el cursor a un puntero para la imagen del producto */
+}
+
+.container-productos .card h5 {
+    font-weight: 600;
+    /* Peso de la fuente para el título del producto */
+    padding: 5px;
+    /* Relleno para el título del producto */
+}
+
+.container-productos .card p {
+    padding-top: 5px;
+    /* Relleno superior para el párrafo del producto */
+}
+
+.container-productos .card a {
+    padding: 10px;
+    /* Relleno para el enlace del producto */
+    display: block;
+    /* Convertir el enlace en un elemento de bloque para ocupar el ancho completo de la tarjeta */
+    width: 50%;
+    /* Ancho del enlace del producto */
+    margin: 0 auto;
+    /* Margen automático para centrar el enlace del producto */
+}
+
+/* Estilos para la sección del pie de página */
+.footer-section {
+    background-color: #141414;
+    /* Color de fondo para la sección del pie de página */
+    color: #fff;
+    /* Color del texto en la sección del pie de página */
+    padding: 20px 0;
+    /* Relleno superior e inferior para la sección del pie de página */
+}
+
+/* Estilos para el menú del pie de página */
+.footer-menu ul {
+    list-style: none;
+    /* Eliminar estilos de lista por defecto */
+    padding: 0;
+    /* Reiniciar relleno para la lista del menú del pie de página */
+    margin: 0;
+    /* Reiniciar margen para la lista del menú del pie de página */
+    text-align: center;
+    /* Alinear texto al centro en el menú del pie de página */
+}
+
+.footer-menu li {
+    display: inline-block;
+    /* Mostrar elementos de lista en línea en el menú del pie de página */
+    margin-right: 20px;
+    /* Margen derecho entre elementos de lista en el menú del pie de página */
+}
+
+.footer-menu a {
+    text-decoration: none;
+    /* Eliminar subrayados de los enlaces en el menú del pie de página */
+    color: #fff;
+    /* Color del texto para los enlaces en el menú del pie de página */
+    font-size: 16px;
+    /* Tamaño de fuente para los enlaces en el menú del pie de página */
+    transition: color 0.3s;
+    /* Transición suave del color al pasar el mouse sobre los enlaces */
+}
+
+/* Estilos para el color del texto del menú al pasar el mouse */
+.footer-menu a:hover {
+    color: rgb(0, 17, 255);
+    /* Cambiar el color del texto al pasar el mouse sobre los enlaces del menú del pie de página */
+}
+
+/* Estilos para el área de derechos de autor */
+.copyright-area {
+    display: flex;
+    /* Contenedor flex para el área de derechos de autor */
+    justify-content: center;
+    /* Centrar elementos horizontalmente en el área de derechos de autor */
+}
+
+/* Estilos para el texto de derechos de autor */
+.copyright-text p {
+    margin: 0;
+    /* Eliminar márgenes para el texto de derechos de autor */
+    font-size: 14px;
+    /* Tamaño de fuente para el texto de derechos de autor */
+    color: #878787;
+    /* Color del texto de derechos de autor */
+}
+
+/* Ajustes de alineación de texto */
+.text-lg-left {
+    text-align: left !important;
+    /* Alinear texto a la izquierda en tamaños de pantalla grandes */
+}
+
+.text-right {
+    text-align: right !important;
+    /* Alinear texto a la derecha */
+}
+
+.col-xl-6 {
+    flex: 0 0 50%;
+    /* Establecer el ancho de la columna en un 50% para tamaños de pantalla extra grandes */
+    max-width: 50%;
+    /* Ancho máximo para la columna */
+}
+
+.d-lg-block {
+    display: block !important;
+    /* Mostrar elementos en tamaños de pantalla grandes */
+}
+
+.col-xl-6 {
+    /* Estilos para columnas extra grandes */
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .menu-icon {
+        display: block;
+        /* Mostrar el icono del menú para tamaños de pantalla pequeños */
+        cursor: pointer;
+        /* Estilo del cursor para el icono del menú */
+        padding: 0.5rem 1rem;
+        /* Relleno para el icono del menú */
+    }
+
+    .navigation {
+        width: 100%;
+        /* Ancho completo para la navegación */
+        margin-top: 1rem;
+        /* Margen superior para la navegación */
+    }
+
+    .navigation ul {
+        display: none;
+        /* Ocultar la lista de navegación por defecto */
+    }
+
+    .navigation ul.show {
+        display: block;
+        /* Mostrar la lista de navegación cuando la clase 'show' está presente */
+    }
+
+    .navigation ul li {
+        display: block;
+        /* Mostrar elementos de lista de bloque para tamaños de pantalla pequeños */
+    }
+
+    .navigation ul li a {
+        display: block;
+        /* Mostrar enlaces de bloque para tamaños de pantalla pequeños */
+        padding: 0.5rem 0;
+        /* Relleno para enlaces de navegación */
+    }
+
+    .navigation ul li a:hover {
+        color: #ffffff;
+        /* Cambiar el color del texto al pasar el mouse sobre enlaces de navegación */
+    }
+
+    header {
+        height: auto;
+        /* Altura automática para el encabezado en tamaños de pantalla pequeños */
+    }
+
+    .dropdown-menu {
+        left: 0;
+        /* Colocar el menú desplegable en la parte izquierda para tamaños de pantalla pequeños */
+        height: 250px;
+        /* Altura reducida del menú desplegable del carrito para tamaños de pantalla pequeños */
+    }
+
+    .slider {
+        padding-top: 5rem;
+        /* Relleno superior reducido para el slider en tamaños de pantalla pequeños */
+    }
+
+    .container-imagen {
+        width: 70%;
+        /* Ancho reducido para la imagen en tamaños de pantalla pequeños */
+        display: block;
+        /* Mostrar la imagen como bloque para centrarla */
+        margin: 0 auto;
+        /* Margen automático para centrar la imagen */
+    }
+
+    .container-contacto form {
+        width: 100%;
+        /* Ancho completo para el formulario de contacto en tamaños de pantalla pequeños */
+    }
+
+    .columna1,
+    .columna2 {
+        width: 100%;
+        /* Ancho completo para las columnas en tamaños de pantalla pequeños */
+        float: none;
+        /* No flotar las columnas en tamaños de pantalla pequeños */
+    }
+
+    .columna2 img {
+        width: 300px;
+        /* Ancho reducido para la imagen en la columna2 en tamaños de pantalla pequeños */
+    }
+
+    .container-carrito form {
+        width: 100%;
+        /* Ancho completo para el formulario del carrito en tamaños de pantalla pequeños */
+    }
+
+    .tabla td,
+    .tabla th {
+        padding: .1rem;
+        /* Relleno reducido para las celdas de la tabla en tamaños de pantalla pequeños */
+    }
+}
+
+/* Contenedor para el área del usuario */
+.user-container {
+    display: flex;
+    /* Contenedor flex para el área del usuario */
+    align-items: center;
+    /* Centrar elementos verticalmente en el área del usuario */
+}

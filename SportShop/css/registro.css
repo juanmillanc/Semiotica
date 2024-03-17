@@ -1,0 +1,319 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background-image: url('../imagenes/sport3.jpeg');
+    /* Establece la imagen de fondo */
+    background-size: cover;
+    /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    /* Posiciona la imagen de fondo en el centro */
+    margin: 0;
+    /* Elimina los márgenes predeterminados */
+    font-family: "lato", sans-serif;
+    /* Define la fuente principal */
+    color: #000;
+    /* Establece el color de texto por defecto para todo el cuerpo */
+    /* Color de texto por defecto para todo el cuerpo */
+}
+
+/* Estilos para el contenedor del formulario de registro */
+.signupFrm {
+    display: flex;
+    /* Usa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    height: 560px;
+    /* Establece la altura al 100% del viewport */
+}
+
+/* Estilos para el formulario */
+.form {
+    background-color: rgba(255, 255, 255, 0.507);
+    /* Fondo semitransparente del formulario */
+    width: 400px;
+    /* Ancho del formulario */
+    border-radius: 8px;
+    /* Borde redondeado */
+    padding: 20px 40px;
+    /* Relleno interno */
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    /* Sombra */
+    margin-top: 80px;
+}
+
+/* Estilos para el título del formulario */
+.title {
+    font-size: 40px;
+    /* Tamaño del texto del título */
+    margin-bottom: 30px;
+    /* Margen inferior del título */
+}
+
+/* Estilos para el contenedor de cada campo de entrada */
+.inputContainer {
+    position: relative;
+    /* Establece la posición relativa */
+    height: 30px;
+    /* Altura del contenedor del campo de entrada */
+    width: 350px;
+    /* Ancho del contenedor del campo de entrada */
+    margin-bottom: 20px;
+    /* Margen inferior del contenedor */
+}
+
+/* Estilos para los campos de entrada */
+.input {
+    position: absolute;
+    /* Posición absoluta */
+    top: 0;
+    /* Ubicación desde la parte superior */
+    left: 0;
+    /* Ubicación desde la izquierda */
+    height: 100%;
+    /* Altura al 100% del contenedor */
+    width: 100%;
+    /* Ancho al 100% del contenedor */
+    border: 1px solid #000;
+    /* Borde del campo de entrada */
+    border-radius: 7px;
+    /* Borde redondeado */
+    font-size: 16px;
+    /* Tamaño del texto */
+    padding: 0 20px;
+    /* Relleno interno */
+    outline: none;
+    /* Elimina el contorno al enfocar */
+    background: none;
+    /* Fondo transparente */
+    z-index: 1;
+    /* Coloca el campo sobre otros elementos */
+}
+
+/* Estilos para el nuevo label de género */
+.inputContainer label {
+    position: absolute;
+    /* Establece la posición absoluta para el elemento label */
+    top: 8px;
+    /* Desplaza el label 15 píxeles hacia abajo desde la parte superior del contenedor */
+    left: 15px;
+    /* Desplaza el label 15 píxeles hacia la derecha desde el borde izquierdo del contenedor */
+    padding: 0 4px;
+    /* Agrega un relleno de 0 píxeles en la parte superior e inferior y 4 píxeles en los lados derecho e izquierdo al label */
+    color: #000;
+    /* Establece el color del texto del label a negro */
+    font-size: 16px;
+    /* Establece el tamaño de fuente del label a 16 píxeles */
+    transition: 0.5s;
+    /* Agrega una transición de 0.5 segundos para suavizar los cambios de estilo */
+    z-index: 0;
+    /* Establece el índice de apilamiento del label, indicando que debe colocarse detrás del campo de entrada */
+}
+
+/* Estilos para el campo de género */
+.genderSelect {
+    position: absolute;
+    /* Establece la posición absoluta para el elemento genderSelect */
+    top: 0;
+    /* Coloca el genderSelect en la parte superior del contenedor */
+    left: 0;
+    /* Coloca el genderSelect en el borde izquierdo del contenedor */
+    height: 104%;
+    /* Aumenta la altura del genderSelect al 104% de la altura del contenedor */
+    width: 112%;
+    /* Aumenta el ancho del genderSelect al 112% del ancho del contenedor */
+    border: 1px solid #000;
+    /* Agrega un borde sólido de 1 píxel de color negro al genderSelect */
+    border-radius: 7px;
+    /* Agrega un borde redondeado de 7 píxeles al genderSelect */
+    font-size: 16px;
+    /* Establece el tamaño de fuente del genderSelect a 16 píxeles */
+    padding: 0 20px;
+    /* Agrega relleno de 0 píxeles en la parte superior e inferior y 20 píxeles en los lados derecho e izquierdo al genderSelect */
+    outline: none;
+    /* Elimina el contorno al enfocar el genderSelect */
+    background: none;
+    /* Establece el fondo del genderSelect como transparente */
+    z-index: 1;
+    /* Establece el índice de apilamiento del genderSelect, indicando que debe colocarse sobre el label */
+}
+
+/* Estilos para el texto de marcador de posición en el campo de género */
+.genderSelect::placeholder {
+    color: transparent;
+    /* Hace que el marcador de posición sea transparente en el campo de género */
+}
+
+/* Estilos para el campo de género cuando está enfocado */
+.genderSelect:focus {
+    border: 2px solid rgb(0, 0, 0);
+    /* Agrega un borde sólido de 2 píxeles de color morado al campo de género cuando está enfocado */
+}
+
+/* Estilos para las opciones del género */
+.genderSelect option {
+    text-align: right;
+    /* Alinea el texto de las opciones del género a la derecha dentro del campo de selección */
+}
+
+/* Estilos para las etiquetas de los campos de entrada */
+.label {
+    position: absolute;
+    /* Posición absoluta */
+    top: 15px;
+    /* Ubicación desde la parte superior */
+    left: 15px;
+    /* Ubicación desde la izquierda */
+    padding: 0 4px;
+    /* Relleno interno */
+    color: #000;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño del texto */
+    transition: 0.5s;
+    /* Transición animada */
+    z-index: 0;
+    /* Coloca la etiqueta detrás del campo */
+}
+
+/* Estilos para el texto de marcador de posición en los campos de entrada */
+::placeholder {
+    color: transparent;
+    /* Hace que el marcador de posición sea transparente */
+}
+
+/* Estilos para los botones de envío y enlace de inicio de sesión */
+.submitBtn,
+.signInLink {
+    display: block;
+    /* Elemento de bloque */
+    margin-left: auto;
+    /* Margen izquierdo automático */
+    padding: 15px 30px;
+    /* Relleno interno */
+    border: none;
+    /* Sin borde */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border-radius: 6px;
+    /* Borde redondeado */
+    cursor: pointer;
+    /* Cursor al pasar */
+    font-size: 16px;
+    /* Tamaño del texto */
+    margin-top: 30px;
+    /* Margen superior */
+}
+
+/* Estilos al pasar el cursor sobre los botones de envío y enlace de inicio de sesión */
+.submitBtn:hover,
+.signInLink:hover {
+    background-color: #333333;
+    /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-2px);
+    /* Efecto de desplazamiento hacia arriba */
+}
+
+/* Estilos para la etiqueta cuando el campo está enfocado o tiene contenido */
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    top: -14px;
+    /* Posicionamiento hacia arriba */
+    left: 1px;
+    /* Posicionamiento hacia la izquierda */
+    z-index: 10;
+    /* Coloca la etiqueta sobre el campo */
+    font-size: 14px;
+    /* Tamaño del texto reducido */
+    font-weight: 600;
+    /* Peso de la fuente */
+    color: rgb(0, 0, 0);
+    /* Color del texto */
+}
+
+/* Estilos para el campo de entrada cuando está enfocado */
+.input:focus {
+    border: 2px solid rgb(0, 0, 0);
+    /* Borde al enfocar */
+}
+
+/* Estilos para el contenedor de botones */
+.buttons {
+    display: flex;
+    /* Usa el modelo de caja flexible */
+    justify-content: space-between;
+    /* Espaciado uniforme entre elementos */
+    align-items: center;
+    /* Alineación vertical de elementos */
+}
+
+/* Estilos para los botones de envío y enlace de inicio de sesión dentro del contenedor */
+.submitBtn,
+.signInLink {
+    flex: 1;
+    /* Ocupa el espacio disponible */
+    margin: 0;
+    /* Sin margen */
+}
+
+/* Estilos para el contenedor del enlace "Iniciar Sesión" */
+.signInLinkContainer {
+    text-align: center;
+    /* Alineación del texto al centro */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+/* Estilos para el enlace "Iniciar Sesión" */
+.signInLink {
+    display: inline-block;
+    /* Elemento en línea con bloque */
+    padding: 10px 20px;
+    /* Relleno interno */
+    border: none;
+    /* Sin borde */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border-radius: 6px;
+    /* Borde redondeado */
+    cursor: pointer;
+    /* Cursor al pasar */
+    font-size: 16px;
+    /* Tamaño del texto */
+    text-decoration: none;
+    /* Sin decoración de texto */
+}
+
+/* Estilos para el enlace "Iniciar Sesión" al pasar el cursor sobre él */
+.signInLink:hover {
+    background-color: #333333;
+    /* Cambia el color de fondo al pasar el cursor */
+    transform: translateY(-2px);
+    /* Efecto de desplazamiento hacia arriba */
+}
+
+#central {
+    max-width: 320px;
+    width: 500%;
+}
+
+.inferior {
+    margin-top: 10px;
+    font-size: 100%;
+    text-align: center;
+}
+
+.inferior a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3px;
+}
+
+.inferior a:hover {
+    color: rgb(0, 26, 255);
+}

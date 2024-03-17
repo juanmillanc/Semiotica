@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros</title>
+  <link href="../css/nosotros.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../imagenes/logo_circular.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="../imagenes/logo.jpeg" alt="Logo">
+        </div>
+      </div>
+      <div class="nav-center">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="Buscar...">
+          <button class="search-button">&#128269;</button>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="sportshops.html" class="nav-link">Inicio</a>
+            <a href="productos.html" class="nav-link">Tienda</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="contacto.html" class="nav-link">Contactanos</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="registro.html" class="nav-link">Register</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <div class="user-dropdown">
+          <img class="user-image" src="../imagenes/usuario.png" alt="Usuario" onclick="toggleUserMenu()">
+          <div class="user-menu" id="userMenu">
+            <a href="perfil.html">Cuenta</a>
+            <a href="#">Cerrar Sesión</a>
+          </div>
+        </div>
+        <a href="carrito.html"><img class="cart-image" src="../imagenes/carrito.png" alt="Carrito"></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="columna1">
+        <h2 class="somos">¿Quiénes Somos?</h2>
+        <p>En SportShops, estamos apasionados por el deporte y comprometidos con brindar a nuestros clientes la mejor
+          experiencia en artículos deportivos. Fundada en [año de fundación], nos enorgullece ser una tienda deportiva
+          líder que ofrece una amplia gama de productos de alta calidad para atletas de todos los niveles y edades.</p>
+
+        <h2>Nuestra Misión</h2>
+        <p>Nuestra misión es inspirar y empoderar a las personas a través del deporte, proporcionando acceso a equipos y
+          accesorios de primera calidad que mejoren su rendimiento y fomenten un estilo de vida activo y saludable.</p>
+
+        <h2>Compromiso con la Calidad</h2>
+        <p>En SportShops, nos comprometemos a ofrecer productos de la más alta calidad de las principales marcas
+          deportivas. Trabajamos estrechamente con proveedores de confianza para garantizar que cada artículo que
+          vendemos cumpla con los estándares más exigentes.</p>
+
+        <h2>Variedad y Selección</h2>
+        <p>Entendemos que cada deporte tiene sus propias demandas únicas, y es por eso que ofrecemos una amplia variedad
+          de productos para satisfacer todas las necesidades deportivas. Ya sea que seas un corredor ávido, un
+          entusiasta del fitness o un jugador apasionado, SportShops tiene todo lo que necesitas para alcanzar tus
+          metas.</p>
+
+
+        <h2>Experiencia del Cliente</h2>
+        <p>Nos esforzamos por ofrecer la mejor experiencia de compra posible. Nuestro equipo está formado por
+          entusiastas del deporte que están dispuestos a compartir su conocimiento y asesoramiento para ayudarte a
+          encontrar el equipo adecuado. Además, brindamos un servicio al cliente excepcional para garantizar tu
+          satisfacción en cada compra.</p>
+
+
+        <h2>Compromiso con la Comunidad</h2>
+        <p>En SportShops, creemos en devolver a la comunidad. Colaboramos con organizaciones locales y patrocinamos
+          eventos deportivos para apoyar y promover un estilo de vida activo en nuestra comunidad.</p>
+
+
+        <p class="agradecimiento">Gracias por elegir SportShops. Estamos aquí para ser tu destino de confianza para
+          todos tus artículos deportivos. ¡Juntos, hagamos que cada movimiento cuente!</p>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <br /><br />
+    <div class="custom-container">
+      <div class="custom-col-3">
+        <h1 class="custom-logo">Sport-<span>Shops</span></h1>
+        <div class="custom-social">
+          <a class="custom-social-btn"><i class="fab fa-twitter"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-facebook"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-youtube"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+      <div class="custom-col-3">
+        <h5>Dirección</h5>
+        <p><i class="fa fa-map-marker-alt me-3"></i>Crr 203, Apartado, COL</p>
+        <p><i class="fa fa-phone-alt me-3"></i>+012-3434-43443</p>
+        <p><i class="fa fa-envelope me-3"></i>+012-3434-43443</p>
+      </div>
+      <div class="custom-col-3">
+        <h5>Enlances rapidos</h5>
+        <a href="nosotros.html" class="custom-btn btn-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="custom-btn btn-link">Contáctenos</a>
+        <a href="productos.html" class="custom-btn btn-link">Tienda</a>
+        <a href="login.html" class="custom-btn btn-link">Inicia sesion</a>
+        <a href="registro.html" class="custom-btn btn-link">Registrate</a>
+      </div>
+      <div class="custom-col-3">
+        <h5>Boletín</h5>
+        <div style="width: 400px; position: relative;">
+          <input class="custom-input" type="text" placeholder="Email" />
+          <button type="button" class="custom-signbtn">SignUp</button>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleUserMenu() {
+      var userMenu = document.getElementById("userMenu");
+      userMenu.classList.toggle("show");
+    }
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function (event) {
+      if (!event.target.matches('.user-image')) {
+        var userMenu = document.getElementById("userMenu");
+        if (userMenu.classList.contains('show')) {
+          userMenu.classList.remove('show');
+        }
+      }
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="../js/scripts1.js"></script>
+</body>
+
+</html>

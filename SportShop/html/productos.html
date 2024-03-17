@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/productos.css">
+</head>
+
+<body>
+
+    <div class="swiper mySwiper">
+
+        <h1 class="title">Nueva Colección</h1>
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/balon.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Balon de Basquetbol</h1>
+                        <span>$95000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/camiseta.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Camiseta</h1>
+                        <span>$45000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/combas.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Combas</h1>
+                        <span>$32000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/cronometro.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Cronometro</h1>
+                        <span>$20000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/gorra.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Gorra</h1>
+                        <span>$42000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/mancuerna.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Mancuerna</h1>
+                        <span>$35000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="icons">
+                    <a href="sportshops.html" class="fa-solid fa-circle-arrow-left"></a>
+                    <i class="fa-regular fa-heart" href="#"></i>
+                </div>
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="../imagenes/images/zapato.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>Zapato</h1>
+                        <span>$145000</span>
+                    </div>
+                </div>
+                <a href="Tienda.html" class="btn-1">comprar</a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true, // Enable continuous loop mode
+            coverflowEffect: {
+                depth: 500,
+                modifer: 1,
+                slidesShadows: true,
+                rotate: 0,
+                stretch: 0
+            },
+            autoplay: {
+                delay: 2000, // Delay between transitions in milliseconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            }
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

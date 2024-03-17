@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link href="../css/contacto.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../imagenes/logo_circular.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="../imagenes/logo.jpeg" alt="Logo">
+        </div>
+      </div>
+      <div class="nav-center">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="Buscar...">
+          <button class="search-button">&#128269;</button>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="sportshops.html" class="nav-link">Inicio</a>
+            <a href="productos.html" class="nav-link">Tienda</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="contacto.html" class="nav-link">Contactanos</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="registro.html" class="nav-link">Register</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <div class="user-dropdown">
+          <img class="user-image" src="../imagenes/usuario.png" alt="Usuario" onclick="toggleUserMenu()">
+          <div class="user-menu" id="userMenu">
+            <a href="perfil.html">Cuenta</a>
+            <a href="#">Cerrar Sesión</a>
+          </div>
+        </div>
+        <a href="carrito.html"><img class="cart-image" src="../imagenes/carrito.png" alt="Carrito"></a>
+      </div>
+
+    </div>
+  </header>
+  <div class="fondo">
+    <div class="container-contacto">
+      <form action="#" id="form" method="POST">
+        <h2>CONTACTO</h2>
+        <br>
+        <input type="text" name="cliente" id="nombre" placeholder="Ingrese su Nombre"
+          onkeypress="return sololetras(event)" onpaste="return false" required>
+        <input type="text" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+        <input type="text" name="celular" id="celular" placeholder="Ingrese su Celular"
+          onkeypress="return solonumeros(event)" onpaste="return false" required>
+        <textarea name="mensaje" placeholder="Escriba su Mensaje" required></textarea>
+        <input type="submit" id="button-contacto" value="ENVIAR" class="button"
+          onclick="validarCorreo(form.correo.value)">
+      </form>
+    </div>
+  </div>
+  <footer>
+    <br /><br />
+    <div class="custom-container">
+      <div class="custom-col-3">
+        <h1 class="custom-logo">Sport-<span>Shops</span></h1>
+        <div class="custom-social">
+          <a class="custom-social-btn"><i class="fab fa-twitter"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-facebook"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-youtube"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+      <div class="custom-col-3">
+        <h5>Dirección</h5>
+        <p><i class="fa fa-map-marker-alt me-3"></i>Crr 203, Apartado, COL</p>
+        <p><i class="fa fa-phone-alt me-3"></i>+012-3434-43443</p>
+        <p><i class="fa fa-envelope me-3"></i>+012-3434-43443</p>
+      </div>
+      <div class="custom-col-3">
+        <h5>Enlances rapidos</h5>
+        <a href="nosotros.html" class="custom-btn btn-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="custom-btn btn-link">Contáctenos</a>
+        <a href="productos.html" class="custom-btn btn-link">Tienda</a>
+        <a href="login.html" class="custom-btn btn-link">Inicia sesion</a>
+        <a href="registro.html" class="custom-btn btn-link">Registrate</a>
+      </div>
+      <div class="custom-col-3">
+        <h5>Boletín</h5>
+        <div style="width: 400px; position: relative;">
+          <input class="custom-input" type="text" placeholder="Email" />
+          <button type="button" class="custom-signbtn">SignUp</button>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleUserMenu() {
+      var userMenu = document.getElementById("userMenu");
+      userMenu.classList.toggle("show");
+    }
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function (event) {
+      if (!event.target.matches('.user-image')) {
+        var userMenu = document.getElementById("userMenu");
+        if (userMenu.classList.contains('show')) {
+          userMenu.classList.remove('show');
+        }
+      }
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="../js/scripts1.js"></script>
+  <script src="../js/contacto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../imagenes/logo_circular.png" type="image/x-icon">
+    <title>SportShops</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../imagenes/logo.jpeg" alt="Logo">
+                </div>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Buscar...">
+                    <button class="search-button">&#128269;</button>
+                </div>
+            </div>
+
+            <nav>
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="sportshops.html" class="nav-link">Inicio</a>
+                        <a href="productos.html" class="nav-link">Tienda</a>
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                        <a href="contacto.html" class="nav-link">Contactanos</a>
+                        <a href="login.html" class="nav-link">Login</a>
+                        <a href="registro.html" class="nav-link">Register</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="nav-right">
+                <div class="user-dropdown">
+                    <img class="user-image" src="../imagenes/usuario.png" alt="Usuario" onclick="toggleUserMenu()">
+                    <div class="user-menu" id="userMenu">
+                        <a href="perfil.html">Cuenta</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+                <a href="carrito.html"><img class="cart-image" src="../imagenes/carrito.png" alt="Carrito"></a>
+            </div>
+
+        </div>
+    </header>
+    <div>
+        <section class="section">
+            <h1>REGISTRATE Y <br> OBTEN UN 10% DTO</h1><br>
+            <a href="registro.html" class="registro-button">Registrarse</a>
+        </section>
+
+        <div class="container-index">
+            <div class="container-circulos">
+                <div class="container-imagen">
+                    <img src="../imagenes/Zapatos/Hombre/Zapatos12.jpg" class="circulo">
+                    <h2>Zapatos</h2>
+                </div>
+                <div class="container-imagen">
+                    <img src="../imagenes/camisetas/Hombre/Camisa8.webp" class="circulo">
+                    <h2>Camisetas</h2>
+                </div>
+                <div class="container-imagen">
+                    <img src="../imagenes/Articulos/Balones/Balon 1.webp" class="circulo">
+                    <h2>Articulos</h2>
+                </div>
+            </div>
+
+            <div class="ver-todo"><a class="button" href="Tienda.html">Ver todos</a></div>
+
+            <div class="contenedor-columna" style="font-size: 20px;">
+                <div class="columna1">
+                    <h2>Bienvenido a SportShops</h2>
+                    <p>SportShops, tu destino premium para artículos deportivos de calidad. Inspira tu estilo de vida
+                        activo
+                        con nuestra selección de ropa y equipos. Únete a nuestra comunidad y alcanza tus metas
+                        deportivas.
+                        ¡Bienvenido a la excelencia en deportes con SportShops!</p>
+                </div>
+                <div class="columna2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <br /><br />
+        <div class="custom-container">
+            <div class="custom-col-3">
+                <h1 class="custom-logo">Sport-<span>Shops</span></h1>
+                <div class="custom-social">
+                    <a class="custom-social-btn"><i class="fab fa-twitter"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-facebook"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-youtube"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+            <div class="custom-col-3">
+                <h5>Dirección</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Crr 203, Apartado, COL</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+012-3434-43443</p>
+                <p><i class="fa fa-envelope me-3"></i>+012-3434-43443</p>
+            </div>
+            <div class="custom-col-3">
+                <h5>Enlances rapidos</h5>
+                <a href="nosotros.html" class="custom-btn btn-link">Sobre Nosotros</a>
+                <a href="contacto.html" class="custom-btn btn-link">Contáctenos</a>
+                <a href="productos.html" class="custom-btn btn-link">Tienda</a>
+                <a href="login.html" class="custom-btn btn-link">Inicia sesion</a>
+                <a href="registro.html" class="custom-btn btn-link">Registrate</a>
+            </div>
+            <div class="custom-col-3">
+                <h5>Boletín</h5>
+                <div style="width: 400px; position: relative;">
+                    <input class="custom-input" type="text" placeholder="Email" />
+                    <button type="button" class="custom-signbtn">SignUp</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleUserMenu() {
+            var userMenu = document.getElementById("userMenu");
+            userMenu.classList.toggle("show");
+        }
+
+        // Cerrar el menú si se hace clic fuera de él
+        window.onclick = function (event) {
+            if (!event.target.matches('.user-image')) {
+                var userMenu = document.getElementById("userMenu");
+                if (userMenu.classList.contains('show')) {
+                    userMenu.classList.remove('show');
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

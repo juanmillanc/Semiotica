@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sergio González Ruano - Diseño Perfil Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../imagenes/logo.jpeg" alt="Logo">
+                </div>
+            </div>
+            <div class="nav-center">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Buscar...">
+                    <button class="search-button">&#128269;</button>
+                </div>
+            </div>
+
+            <nav>
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="sportshops.html" class="nav-link">Inicio</a>
+                        <a href="productos.html" class="nav-link">Tienda</a>
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                        <a href="contacto.html" class="nav-link">Contactanos</a>
+                        <a href="login.html" class="nav-link">Login</a>
+                        <a href="registro.html" class="nav-link">Register</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="nav-right">
+                <div class="user-dropdown">
+                    <img class="user-image" src="../imagenes/usuario.png" alt="Usuario" onclick="toggleUserMenu()">
+                    <div class="user-menu" id="userMenu">
+                        <a href="perfil.html">Cuenta</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+                <a href="carrito.html"><img class="cart-image" src="../imagenes/carrito.png" alt="Carrito"></a>
+            </div>
+
+        </div>
+    </header>
+    <div class="fondo">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-4" style="margin-top: 50px;">
+                    <div class="text-center">
+                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                            class="avatar img-circle img-thumbnail" alt="avatar">
+                        <h6>Upload a different photo...</h6>
+                        <input type="file" class="text-center center-block file-upload">
+                    </div>
+                    </hr><br>
+
+                    <div class="panel-body">
+                        <a href="https://github.com/sergio-gonzalez11"></a>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Compras</strong></span>
+                            125
+                        </li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13
+                        </li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Reseñas</strong></span>
+                            37
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-8" style="margin-top: 50px;">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Perfil</a></li>
+                    </ul>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                            <hr>
+                            <form class="form" action="##" method="post" id="registrationForm">
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="Documento">
+                                            <h4 style="color: aliceblue;">Documento</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="Documento" id="Documento"
+                                            placeholder="Documento" value="<?php echo $documento; ?>" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="nombre">
+                                            <h4 style="color: aliceblue;">Nombre</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="nombre" id="nombre"
+                                            placeholder="nombre" value="<?php echo $nombre; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="Fecha de nacimiento">
+                                            <h4 style="color: aliceblue;">Fecha de nacimiento</h4>
+                                        </label>
+                                        <input type="date" class="form-control" name="Fecha" id="Fecha"
+                                            placeholder="Fecha de nacimiento" value="<?php echo $fechaNacimiento; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="Fecha de nacimiento">
+                                            <h4 style="color: aliceblue;">Genero</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="Genero" id="Genero"
+                                            placeholder="Genero" value="<?php echo $genero; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 style="color: aliceblue;">Email</h4>
+                                        </label>
+                                        <input type="email" class="form-control" name="email" id="email"
+                                            placeholder="you@email.com" value="<?php echo $email; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <br>
+                                        <button class="btn btn-success" type="submit"><i
+                                                class="glyphicon glyphicon-ok-sign"></i> Guardar</button>
+                                        <button class="btn btn-danger" type="reset"><i
+                                                class="glyphicon glyphicon-repeat"></i> Limpiar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <br /><br />
+        <div class="custom-container">
+            <div class="custom-col-3">
+                <h1 class="custom-logo">Sport-<span>Shops</span></h1>
+                <div class="custom-social">
+                    <a class="custom-social-btn"><i class="fab fa-twitter"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-facebook"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-youtube"></i></a>
+                    <a class="custom-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+            <div class="custom-col-3">
+                <h5>Dirección</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Crr 203, Apartado, COL</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+012-3434-43443</p>
+                <p><i class="fa fa-envelope me-3"></i>+012-3434-43443</p>
+            </div>
+            <div class="custom-col-3">
+                <h5>Enlances rapidos</h5>
+                <a href="nosotros.html" class="custom-btn btn-link">Sobre Nosotros</a>
+                <a href="contacto.html" class="custom-btn btn-link">Contáctenos</a>
+                <a href="productos.html" class="custom-btn btn-link">Tienda</a>
+                <a href="login.html" class="custom-btn btn-link">Inicia sesion</a>
+                <a href="registro.html" class="custom-btn btn-link">Registrate</a>
+            </div>
+            <div class="custom-col-3">
+                <h5>Boletín</h5>
+                <div style="width: 400px; position: relative;">
+                    <input class="custom-input" type="text" placeholder="Email" />
+                    <button type="button" class="custom-signbtn">SignUp</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.avatar').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+        });
+    </script>
+</body>
+
+</html>

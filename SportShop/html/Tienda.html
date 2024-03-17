@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda</title>
+  <link href="../css/tienda.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../imagenes/logo_circular.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="../imagenes/logo.jpeg" alt="Logo">
+        </div>
+      </div>
+      <div class="nav-center">
+        <div id="ctn-bars-search" class="search-bar">
+
+          <div id="ctn-icon-search">
+            <input id="inputSearch" type="text" class="search-input" placeholder="Buscar...">
+            <button id="icon-search" class="search-button">&#128269;</button>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="menu" id="show-menu">
+        <nav>
+          <div class="nav-container">
+            <div class="nav-left">
+              <a href="sportshops.html" class="nav-link">Inicio</a>
+              <a href="productos.html" class="nav-link">Tienda</a>
+              <a href="nosotros.html" class="nav-link">Nosotros</a>
+              <a href="contacto.html" class="nav-link">Contactanos</a>
+              <a href="login.html" class="nav-link">Login</a>
+              <a href="registro.html" class="nav-link">Register</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <div class="user-container">
+          <div class="user-dropdown">
+            <img class="user-image" src="../imagenes/usuario.png" alt="Usuario" onclick="toggleUserMenu()">
+            <div class="user-menu" id="userMenu">
+              <a href="perfil.html">Cuenta</a>
+              <a href="#">Cerrar Sesión</a>
+            </div>
+          </div>
+          <li class="car">
+            <img class="cart-image" src="../imagenes/carrito.png" alt="Carrito">
+            <div id="carrito" class="dropdown-menu">
+              <table id="lista-carrito" class="table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
+              <a href="#" id="procesar-pedido" class="button-pedido">Comprar</a>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div id="cover-ctn-search"></div>
+
+  <main>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <img src="" alt="" class="modal-img" id="modal-img">
+      </div>
+      <div class="modal-boton" id="modal-boton">X</div>
+    </div>
+    <div class="store-wrapper">
+
+      <div class="dropdown">
+        <button class="dropdown-button">Categorias</button>
+        <div class="dropdown-content" id="category_list">
+          <a href="#" class="category_item" category="all">Todo</a>
+          <a href="#" class="category_item" category="gorras">Gorras</a>
+          <a href="#" class="category_item" category="camisetas">Camisetas</a>
+          <a href="#" class="category_item" category="pantalonetas">Pantalonetas</a>
+          <a href="#" class="category_item" category="medias">Medias</a>
+          <a href="#" class="category_item" category="zapatos">Zapatos</a>
+          <a href="#" class="category_item" category="balones">Balones</a>
+          <a href="#" class="category_item" category="colchonetas">Colchonetas</a>
+          <a href="#" class="category_item" category="cronometros">Cronometros</a>
+          <a href="#" class="category_item" category="conos">Conos</a>
+          <a href="#" class="category_item" category="mancuernas">Mancuernas</a>
+          <a href="#" class="category_item" category="vallas">Vallas</a>
+          <a href="#" class="category_item" category="pelotas medicinales">Pelotas Medicinales</a>
+          <a href="#" class="category_item" category="combas">Combas</a>
+          <a href="#" class="category_item" category="bandas elasticas">Bandas Elasticas</a>
+          <a href="#" class="category_item" category="basculas">Basculas</a>
+          <a href="#" class="category_item" category="picas">Picas</a>
+          <a href="#" class="category_item" category="cintas metricas">Cintas metricas</a>
+        </div>
+      </div>
+
+
+      <div class="category_list">
+        <ul id="box-search">
+          <li><a href="#" data-category="gorras"><i class="fas fa-search"></i>Gorras</a></li>
+          <li><a href="#" data-category="camisetas"><i class="fas fa-search"></i>Camisetas</a></li>
+          <li><a href="#" data-category="pantaloneta"><i class="fas fa-search"></i>Pantaloneta</a></li>
+          <li><a href="#" data-category="medias"><i class="fas fa-search"></i>Medias</a></li>
+          <li><a href="#" data-category="zapatos"><i class="fas fa-search"></i>Zapatos</a></li>
+        </ul>
+      </div>
+
+      <div class="container-all" id="move-content">
+        <div class="container-productos" id="lista-productos">
+
+          <div class="card" category="gorras">
+            <img src="../imagenes/Gorras/Gorra1.webp" class="card-img">
+            <h5>Gorra Negra Clasica</h5>
+            <p>$ <small class="precio">45000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="1">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="cronometros">
+            <img src="../imagenes/Articulos/Cronometros/Cronometro 5.jpg" class="card-img">
+            <h5>Cronometro Apr-Agua</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="2">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pelotas medicinales">
+            <img src="../imagenes/Articulos/Pelotas Medicinales/Pelota 1.jpg" class="card-img">
+            <h5>Pelota medicinal (7kg)</h5>
+            <p>$ <small class="precio">100000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="3">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Hombre/Camisa1.webp" class="card-img">
+            <h5>Camiseta Agua Marina</h5>
+            <p>$ <small class="precio">65000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="4">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="combas">
+            <img src="../imagenes/Articulos/Combas/Comba 2.webp" class="card-img">
+            <h5>Comba Roja-Negra</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="5">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 3.webp" class="card-img">
+            <h5>Balon Golty Prof.</h5>
+            <p>$ <small class="precio">115000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="6">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="mancuernas">
+            <img src="../imagenes/Articulos/Mancuernas/Mancuerna 3.jpg" class="card-img">
+            <h5>Mancuernas (6kg)</h5>
+            <p>$ <small class="precio">55000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="7">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="basculas">
+            <img src="../imagenes/Articulos/Basculas/Bascula 1.jpg" class="card-img">
+            <h5>Bascula (40kg)</h5>
+            <p>$ <small class="precio">120000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="8">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Mujer/Camisa1.jpg" class="card-img">
+            <h5>Camiseta Mujer Nike</h5>
+            <p>$ <small class="precio">85000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="9">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="bandas elasticas">
+            <img src="../imagenes/Articulos/Bandas elasticas/Bandas 3.jpg" class="card-img">
+            <h5>Bandas Multi-Color</h5>
+            <p>$ <small class="precio">40000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="10">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cintas metricas">
+            <img src="../imagenes/Articulos/Cintas Métricas/Cinta 3.jpg" class="card-img">
+            <h5>Cinta metrica Amarilla</h5>
+            <p>$ <small class="precio">35000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="11">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cronometros">
+            <img src="../imagenes/Articulos/Cronometros/Cronometro 2.jpg" class="card-img">
+            <h5>Cronometro Clasico</h5>
+            <p>$ <small class="precio">50000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="12">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pelotas medicinales">
+            <img src="../imagenes/Articulos/Pelotas Medicinales/Pelota 4.webp" class="card-img">
+            <h5>Pelota Medicinal SPRI</h5>
+            <p>$ <small class="precio">95000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="13">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Hombre/Pantaloneta1.webp" class="card-img">
+            <h5>Pantaloneta Azul Oscura</h5>
+            <p>$ <small class="precio">45000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="14">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="picas">
+            <img src="../imagenes/Articulos/Picas/Pica 3.jpg" class="card-img">
+            <h5>Picas Multi-Color</h5>
+            <p>$ <small class="precio">110000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="15">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="combas">
+            <img src="../imagenes/Articulos/Combas/Comba 5.jpg" class="card-img">
+            <h5>Combas Color Negro</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="16">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="conos">
+            <img src="../imagenes/Articulos/Conos/Cono 1.jpg" class="card-img">
+            <h5>Conos Clasicos</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="17">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="basculas">
+            <img src="../imagenes/Articulos/Basculas/Bascula 3.png" class="card-img">
+            <h5>Bascula Avanzada (50kg)</h5>
+            <p>$ <small class="precio">150000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="18">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="colchonetas">
+            <img src="../imagenes/Articulos/Colchonetas/Colchoneta 4.jpeg" class="card-img">
+            <h5>Colchoneta Rosada</h5>
+            <p>$ <small class="precio">130000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="19">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Mujer/Pantaloneta5.webp" class="card-img">
+            <h5>Pantaloneta Oscura</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="20">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pelotas medicinales">
+            <img src="../imagenes/Articulos/Pelotas Medicinales/Pelota 2.webp" class="card-img">
+            <h5>Pelota medicinal (7kg)</h5>
+            <p>$ <small class="precio">88000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="21">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 8.webp" class="card-img">
+            <h5>Balon Voleibol </h5>
+            <p>$ <small class="precio">90000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="22">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="medias">
+            <img src="../imagenes/Medias/Medias1.png" class="card-img">
+            <h5>Medias Clasicas</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="23">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="vallas">
+            <img src="../imagenes/Articulos/Vallas/Valla 2.jpg" class="card-img">
+            <h5>Valla (90cm)</h5>
+            <p>$ <small class="precio">120000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="24">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cintas metricas">
+            <img src="../imagenes/Articulos/Cintas Métricas/Cinta 2.jpg" class="card-img">
+            <h5>Cinta Metrica Transp.</h5>
+            <p>$ <small class="precio">35000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="25">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Hombre/Zapatos1.webp" class="card-img">
+            <h5>Zapatos Clasicos</h5>
+            <p>$ <small class="precio">180000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="26">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="picas">
+            <img src="../imagenes/Articulos/Picas/Pica 2.jpg" class="card-img">
+            <h5>Picas con Accesorios</h5>
+            <p>$ <small class="precio">50000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="27">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Mujer/Zapatos1.webp" class="card-img">
+            <h5>Zapatos Clasicos Mujer</h5>
+            <p>$ <small class="precio">150000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="28">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="mancuernas">
+            <img src="../imagenes/Articulos/Mancuernas/Mancuerna 4.webp" class="card-img">
+            <h5>Mancuernas Negras (5kg)</h5>
+            <p>$ <small class="precio">92000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="29">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 2.webp" class="card-img">
+            <h5>Balon Golty Prof.</h5>
+            <p>$ <small class="precio">167000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="30">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="combas">
+            <img src="../imagenes/Articulos/Combas/Comba 1.webp" class="card-img">
+            <h5>Combas Avanzadas</h5>
+            <p>$ <small class="precio">80000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="31">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="vallas">
+            <img src="../imagenes/Articulos/Vallas/Valla 1.jpg" class="card-img">
+            <h5>Vallas Rojas (50cm)</h5>
+            <p>$ <small class="precio">130000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="32">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="gorras">
+            <img src="../imagenes/Gorras/Gorra2.webp" class="card-img">
+            <h5>Gorra Deportiva Gris </h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="33">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 6.webp" class="card-img">
+            <h5>Balon Voleibol</h5>
+            <p>$ <small class="precio">180000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="34">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cintas metricas">
+            <img src="../imagenes/Articulos/Cintas Métricas/Cinta 1.jpg" class="card-img">
+            <h5>Cinta metrica Amarilla </h5>
+            <p>$ <small class="precio">45000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="35">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="conos">
+            <img src="../imagenes/Articulos/Conos/Cono 5.webp" class="card-img">
+            <h5>Conos Multi-Color</h5>
+            <p>$ <small class="precio">170000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="36">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="bandas elasticas">
+            <img src="../imagenes/Articulos/Bandas elasticas/Banda 4.jpg" class="card-img">
+            <h5>Bandas elas. Multi-Color</h5>
+            <p>$ <small class="precio">30000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="37">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Hombre/Camisa2.jpg" class="card-img">
+            <h5>Camiseta PSG Mujer</h5>
+            <p>$ <small class="precio">210000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="38">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="colchonetas">
+            <img src="../imagenes/Articulos/Colchonetas/Colchoneta 3.jpg" class="card-img">
+            <h5>Colchonetas SportPro</h5>
+            <p>$ <small class="precio">65000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="39">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pelotas medicinales">
+            <img src="../imagenes/Articulos/Pelotas Medicinales/Pelota 5.jpg" class="card-img">
+            <h5>Pelota medicinal (4Lb) </h5>
+            <p>$ <small class="precio">55000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="40">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Mujer/Camisa2.webp" class="card-img">
+            <h5>Camiseta Deportiva Azul</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="41">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="mancuernas">
+            <img src="../imagenes/Articulos/Mancuernas/Mancuerna 5.webp" class="card-img">
+            <h5>Mancuernas Rojas 8(kg) </h5>
+            <p>$ <small class="precio">95000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="42">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="vallas">
+            <img src="../imagenes/Articulos/Vallas/Valla 3.webp" class="card-img">
+            <h5>Valla (90cm) </h5>
+            <p>$ <small class="precio">120000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="43">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cintas metricas">
+            <img src="../imagenes/Articulos/Cintas Métricas/Cinta 4.jpg" class="card-img">
+            <h5>Cinta metrica Blanca </h5>
+            <p>$ <small class="precio">42000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="44">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Hombre/Pantaloneta2.webp" class="card-img">
+            <h5>Pantaloneta Jordan</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="45">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 9.jpg" class="card-img">
+            <h5>Balon Basketball Wilson</h5>
+            <p>$ <small class="precio">180000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="46">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="picas">
+            <img src="../imagenes/Articulos/Picas/Pica 1.jpg" class="card-img">
+            <h5>Picas Multi-Color</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="47">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Mujer/Pantaloneta2.jpg" class="card-img">
+            <h5>Pantaloneta Clasica Negra</h5>
+            <p>$ <small class="precio">45000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="48">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="medias">
+            <img src="../imagenes/Medias/Medias2.jpg" class="card-img">
+            <h5>Medias Rojas Sport</h5>
+            <p>$ <small class="precio">80000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="49">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 7.jpg" class="card-img">
+            <h5>Balon Voleiball</h5>
+            <p>$ <small class="precio">135000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="50">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="bandas elasticas">
+            <img src="../imagenes/Articulos/Bandas elasticas/Bandas 2.png" class="card-img">
+            <h5>Banda elasticas Multi-Color</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="51">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Hombre/Zapatos2.jpeg" class="card-img">
+            <h5>Zapatos Puma Negros</h5>
+            <p>$ <small class="precio">210000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="52">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="cronometros">
+            <img src="../imagenes/Articulos/Cronometros/Cronometro 1.webp" class="card-img">
+            <h5>Cronometro Clasico</h5>
+            <p>$ <small class="precio">55000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="53">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Mujer/Zapatos2.webp" class="card-img">
+            <h5>Zapatos Blancos Clasicos</h5>
+            <p>$ <small class="precio">130000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="54">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pelotas medicinales">
+            <img src="../imagenes/Articulos/Pelotas Medicinales/Pelota 3.jpg" class="card-img">
+            <h5>Pelota medicinal Everlast</h5>
+            <p>$ <small class="precio">88000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="55">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="gorras">
+            <img src="../imagenes/Gorras/Gorra3.jpeg" class="card-img">
+            <h5>Gorra Clasica Negra</h5>
+            <p>$ <small class="precio">48000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="56">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="colchonetas">
+            <img src="../imagenes/Articulos/Colchonetas/Colchoneta 2.webp" class="card-img">
+            <h5>Colchoneta Sportshop</h5>
+            <p>$ <small class="precio">135000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="57">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 11.png" class="card-img">
+            <h5>Balon Basketball Golty</h5>
+            <p>$ <small class="precio">190000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="58">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="combas">
+            <img src="../imagenes/Articulos/Combas/Comba 3.jpeg" class="card-img">
+            <h5>Comba Clasica Negro-Azul</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="59">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Hombre/Camisa3.webp" class="card-img">
+            <h5>Camiseta Negra Clasica</h5>
+            <p>$ <small class="precio">80000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="60">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="conos">
+            <img src="../imagenes/Articulos/Conos/Cono 3.jpg" class="card-img">
+            <h5>Conos Multi-Color</h5>
+            <p>$ <small class="precio">110000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="61">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Mujer/Camisa3.jpg" class="card-img">
+            <h5>Camiseta Deportiva Mujer</h5>
+            <p>$ <small class="precio">86000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="62">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="mancuernas">
+            <img src="../imagenes/Articulos/Mancuernas/Mancuerna 1.jpg" class="card-img">
+            <h5>Mancuernas Gris (5kg)</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="63">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Hombre/Pantaloneta3.webp" class="card-img">
+            <h5>Pantaloneta Nike Negra</h5>
+            <p>$ <small class="precio">70000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="64">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 12.jpg" class="card-img">
+            <h5>Balon Baketball Verde</h5>
+            <p>$ <small class="precio">175000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="65">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="vallas">
+            <img src="../imagenes/Articulos/Vallas/Valla 5.jpg" class="card-img">
+            <h5>Vallas (60cm)</h5>
+            <p>$ <small class="precio">72000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="66">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Mujer/Pantaloneta3.jpg" class="card-img">
+            <h5>Short Mujer Negro</h5>
+            <p>$ <small class="precio">67000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="67">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="medias">
+            <img src="../imagenes/Medias/medias3.jpeg" class="card-img">
+            <h5>Medias Blancas Adidas</h5>
+            <p>$ <small class="precio">50000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="68">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="cronometros">
+            <img src="../imagenes/Articulos/Cronometros/Cronometro 5.jpg" class="card-img">
+            <h5>Cronometro Avanzado</h5>
+            <p>$ <small class="precio">69000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="69">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Hombre/Zapatos3.jpeg" class="card-img">
+            <h5>Zapatos Puma Azules</h5>
+            <p>$ <small class="precio">140000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="70">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="conos">
+            <img src="../imagenes/Articulos/Conos/Cono 4.jpg" class="card-img">
+            <h5>Conos Clasicos</h5>
+            <p>$ <small class="precio">105000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="71">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Mujer/Zapatos3.jpeg" class="card-img">
+            <h5>Zapatos Fashion Negros</h5>
+            <p>$ <small class="precio">125000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="72">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="colchonetas">
+            <img src="../imagenes/Articulos/Colchonetas/Colchoneta 1.jpg" class="card-img">
+            <h5>Colchoneta Morada</h5>
+            <p>$ <small class="precio">90000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="73">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="gorras">
+            <img src="../imagenes/Gorras/Gorra4.jpg" class="card-img">
+            <h5>Gorra CAP Negra</h5>
+            <p>$ <small class="precio">40000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="74">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="mancuernas">
+            <img src="../imagenes/Articulos/Mancuernas/Mancuerna 2.webp" class="card-img">
+            <h5>Mancuerna Azul (12Lb)</h5>
+            <p>$ <small class="precio">93000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="75">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 5.webp" class="card-img">
+            <h5>Balon Voleiball</h5>
+            <p>$ <small class="precio">125000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="76">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Hombre/Camisa4.jpg" class="card-img">
+            <h5>Camiseta Deportiva Blanca</h5>
+            <p>$ <small class="precio">75000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="77">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="camisetas">
+            <img src="../imagenes/camisetas/Mujer/Camisa4.webp" class="card-img">
+            <h5>Camiseta Rosada</h5>
+            <p>$ <small class="precio">80000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="78">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="vallas">
+            <img src="../imagenes/Articulos/Vallas/Valla 4.webp" class="card-img">
+            <h5>Valla (75cm)</h5>
+            <p>$ <small class="precio">100000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="79">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Hombre/Pantaloneta4.jpeg" class="card-img">
+            <h5>Pantaloneta Under Armour Azul</h5>
+            <p>$ <small class="precio">60000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="80">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 10.jpeg" class="card-img">
+            <h5>Balon Basketball Wilson2</h5>
+            <p>$ <small class="precio">175000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="81">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="pantalonetas">
+            <img src="../imagenes/Pantalonetas/Mujer/Pantaloneta4.webp" class="card-img">
+            <h5>Short Blanco Mujer</h5>
+            <p>$ <small class="precio">65000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="82">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="colchonetas">
+            <img src="../imagenes/Articulos/Colchonetas/Colchoneta 5.jpg" class="card-img">
+            <h5>Colchoneta Sportshop Negra</h5>
+            <p>$ <small class="precio">105000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="83">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cronometros">
+            <img src="../imagenes/Articulos/Cronometros/Cronometro 3.webp" class="card-img">
+            <h5>Cronometro Basico</h5>
+            <p>$ <small class="precio">30000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="84">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="medias">
+            <img src="../imagenes/Medias/Medias4.jpg" class="card-img">
+            <h5>Medias Sport Verdes</h5>
+            <p>$ <small class="precio">58000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="85">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="balones">
+            <img src="../imagenes/Articulos/Balones/Balon 4.jpeg" class="card-img">
+            <h5>Balon VIOMAR</h5>
+            <p>$ <small class="precio">160000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="86">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Hombre/Zapatos4.webp" class="card-img">
+            <h5>Zapatos Sport Negros</h5>
+            <p>$ <small class="precio">125000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="87">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="conos">
+            <img src="../imagenes/Articulos/Conos/Cono 2.jpg" class="card-img">
+            <h5>Conos Basicos2</h5>
+            <p>$ <small class="precio">60500</small></p>
+            <a href="#" class="button agregar-carrito" data-id="88">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="zapatos">
+            <img src="../imagenes/Zapatos/Mujer/Zapatos4.jpg" class="card-img">
+            <h5>Zapatos Sportshop</h5>
+            <p>$ <small class="precio">130000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="89">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="medias">
+            <img src="../imagenes/Medias/Medias10.jpg" class="card-img">
+            <h5>medias Sportshop</h5>
+            <p>$ <small class="precio">20000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="90">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="combas">
+            <img src="../imagenes/Articulos/Combas/Comba 5.jpg" class="card-img">
+            <h5>combas Sportshop</h5>
+            <p>$ <small class="precio">15000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="91">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="bandas elasticas">
+            <img src="../imagenes/Articulos/Bandas elasticas/Bandas 1.webp" class="card-img">
+            <h5>bandas elasticas</h5>
+            <p>$ <small class="precio">30000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="92">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="bandas elasticas">
+            <img src="../imagenes/Articulos/Bandas elasticas/Bandas 2.png" class="card-img">
+            <h5>bandas elasticas</h5>
+            <p>$ <small class="precio">35000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="93">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="basculas">
+            <img src="../imagenes/Articulos/Basculas/Bascula 1.jpg" class="card-img">
+            <h5>basculas</h5>
+            <p>$ <small class="precio">65000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="95">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="basculas">
+            <img src="../imagenes/Articulos/Basculas/Bascula 3.png" class="card-img">
+            <h5>basculas</h5>
+            <p>$ <small class="precio">70000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="96">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="basculas">
+            <img src="../imagenes/Articulos/Basculas/Bascula 4.jpeg" class="card-img">
+            <h5>basculas</h5>
+            <p>$ <small class="precio">78000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="97">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="picas">
+            <img src="../imagenes/Articulos/Picas/Pica 4.jpg" class="card-img">
+            <h5>picas</h5>
+            <p>$ <small class="precio">18000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="98">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="picas">
+            <img src="../imagenes/Articulos/Picas/Pica 3.jpg" class="card-img">
+            <h5>picas</h5>
+            <p>$ <small class="precio">20000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="99">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="cintas metricas">
+            <img src="../imagenes/Articulos/Cintas Métricas/Cinta 5.webp" class="card-img">
+            <h5>cintas</h5>
+            <p>$ <small class="precio">10000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="100">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+          <div class="card" category="gorras">
+            <img src="../imagenes/Gorras/Gorra14.webp" class="card-img">
+            <h5>gorras</h5>
+            <p>$ <small class="precio">10000</small></p>
+            <a href="#" class="button agregar-carrito" data-id="101">Agregar</a>
+            <input type="number" class="quantity" value="1" min="1">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <br /><br />
+    <div class="custom-container">
+      <div class="custom-col-3">
+        <h1 class="custom-logo">Sport-<span>Shops</span></h1>
+        <div class="custom-social">
+          <a class="custom-social-btn"><i class="fab fa-twitter"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-facebook"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-youtube"></i></a>
+          <a class="custom-social-btn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+      <div class="custom-col-3">
+        <h5>Dirección</h5>
+        <p><i class="fa fa-map-marker-alt me-3"></i>Crr 203, Apartado, COL</p>
+        <p><i class="fa fa-phone-alt me-3"></i>+012-3434-43443</p>
+        <p><i class="fa fa-envelope me-3"></i>+012-3434-43443</p>
+      </div>
+      <div class="custom-col-3">
+        <h5>Enlances rapidos</h5>
+        <a href="nosotros.html" class="custom-btn btn-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="custom-btn btn-link">Contáctenos</a>
+        <a href="productos.html" class="custom-btn btn-link">Tienda</a>
+        <a href="login.html" class="custom-btn btn-link">Inicia sesion</a>
+        <a href="registro.html" class="custom-btn btn-link">Registrate</a>
+      </div>
+      <div class="custom-col-3">
+        <h5>Boletín</h5>
+        <div style="width: 400px; position: relative;">
+          <input class="custom-input" type="text" placeholder="Email" />
+          <button type="button" class="custom-signbtn">SignUp</button>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.dropdown-button').addEventListener('click', function () {
+      let categoryList = document.getElementById('category_list');
+      if (categoryList.style.display === 'none') {
+        categoryList.style.display = 'block';
+      } else {
+        categoryList.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script>
+    function toggleUserMenu() {
+      var userMenu = document.getElementById("userMenu");
+      userMenu.classList.toggle("show");
+    }
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function (event) {
+      if (!event.target.matches('.user-image')) {
+        var userMenu = document.getElementById("userMenu");
+        if (userMenu.classList.contains('show')) {
+          userMenu.classList.remove('show');
+        }
+      }
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="../js/scripts1.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/pedido.js"></script>
+  <script src="../js/compra.js"></script>
+  <script src="../js/categoria.js"></script>
+  <script src="../js/buscador.js"></script>
+</body>
+
+</html>

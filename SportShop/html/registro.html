@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../imagenes/logo_circular.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/login.js"></script>
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+    <div class="signupFrm">
+        <div class="central">
+            <form action="../php/action/guardar_datos.php" class="form" method="POST">
+
+                <h1 class="title">Registro</h1>
+
+                <div class="inputContainer">
+                    <input type="number" class="input" name="Documento" id="Documento" placeholder=" ">
+                    <label for="" class="label">Documento</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="text" class="input" name="Nombre" id="Nombre" placeholder=" ">
+                    <label for="" class="label">Usuario</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="date" class="input" name="Fecha" id="Fecha" placeholder=" ">
+                    <label for="" class="label">Fecha</label>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="" class="label">Género</label>
+                    <input type="Genero" class="input" name="Genero" id="Genero" placeholder=" ">
+                    <select class="genderSelect" name="Genero" id="">
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Indeterminado</option>
+                    </select>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="email" class="input" name="Email" id="Email" placeholder=" ">
+                    <label for="" class="label">Email</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="Password" class="input" name="Password" id="Password" placeholder=" ">
+                    <label for="" class="label">Contraseña</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="password" class="input" name="ConfirmPassword" id="ConfirmPassword" placeholder=" ">
+                    <label for="" class="label">Confirmar Contraseña</label>
+                </div>
+
+                <div class="buttons">
+                    <input type="submit" class="submitBtn" value="Registrarse">
+                </div>
+
+                <div class="signInLinkContainer">
+                    <a href="login.html" class="signInLink">Iniciar Sesión</a>
+                </div>
+
+            </form>
+
+            <div class="inferior">
+                <a href="sportshops.html">Volver</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
